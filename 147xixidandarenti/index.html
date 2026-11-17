@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>147西西胆大人体-站点导航与内容索引</title>
+<meta name="description" content="147西西胆大人体是面向成年用户的内容导航站点，整理人体艺术摄影、胆大人体写真、人体绘画素材与摄影器材评测等条目，按更新日期、可信度分层和直达入口分类，提供本地搜索与收藏索引。">
+<meta name="keywords" content="147西西胆大人体">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161a2b'/%3E%3Ccircle cx='32' cy='26' r='10' fill='%23e8734a'/%3E%3Cpath d='M16 54c2-12 9-18 16-18s14 6 16 18z' fill='%23e8c07a'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "147西西胆大人体",
+  "description": "面向成年用户的人体艺术摄影与绘画素材导航站点，按更新、分层与入口组织内容。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "人体艺术摄影中的“胆大”具体指什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在摄影语境里，“胆大”通常指构图与姿态对身体轮廓的呈现更直接，例如大面积留白、低角度逆光或贴近拍摄距离。它描述的是拍摄手法与呈现尺度，不等于内容合规性，收藏前仍要看授权说明。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何判断一组人体写真的来源是否可靠？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先看署名摄影师账号与拍摄日期，再查原图分辨率与 EXIF 是否完整，最后对同一组图反向搜索首发平台。三项对不上时，按转载链处理。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "人体绘画素材的参考图该按什么标准筛选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按光源方向、关节可辨度、肤色层次三项筛选。正面强光高对比图适合练轮廓，侧逆光柔光图适合练明暗过渡，同一批素材不要混用两种光源。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "摄影棚的人体布光常配哪些器材与功率？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见配置为两盏400瓦秒影室灯做主光与轮廓光，加一块1.5米柔光箱和一支反光板。功率超过600瓦秒时需同步考虑回电时间与场地电源负载。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么同一组图在不同条目里的更新日期不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "首发时间、转载时间和条目录入时间是三个字段。列表显示的是录入时间，详情页记录首发日期，二者相差超过30天时会在条目上标注“转载”。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --c-bg:#f7f4ef;
+  --c-panel:#ffffff;
+  --c-ink:#1d2233;
+  --c-ink-soft:#4b5162;
+  --c-line:#e2dcd2;
+  --c-main:#16605a;
+  --c-main-deep:#0f4a45;
+  --c-accent:#c9542f;
+  --c-accent-soft:#f6e6df;
+  --c-gold:#b3893c;
+  --c-tag:#eef2f0;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 6px rgba(29,34,51,.06),0 12px 28px rgba(29,34,51,.07);
+  --shadow-sm:0 1px 3px rgba(29,34,51,.07);
+  --sp-1:6px; --sp-2:12px; --sp-3:18px; --sp-4:26px; --sp-5:40px; --sp-6:64px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h)}
+body{
+  margin:0;background:var(--c-bg);color:var(--c-ink);
+  font-family:var(--font);font-size:16px;line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--c-main-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 var(--sp-2)}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+li{margin-bottom:4px}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--c-accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- sticky stack ---------- */
+.sticky-stack{position:sticky;top:0;z-index:60}
+.notice-bar{
+  background:linear-gradient(90deg,var(--c-main-deep),var(--c-main));
+  color:#eef6f4;font-size:13.5px;
+  padding:7px 0;
+}
+.notice-bar .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.notice-bar b{color:#ffd9a8;font-weight:700}
+.notice-bar .dot{width:6px;height:6px;border-radius:50%;background:#ffd9a8;flex:none}
+.notice-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+
+.site-header{
+  background:rgba(247,244,239,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--c-line);
+  box-shadow:var(--shadow-sm);
+}
+.header-inner{
+  display:flex;align-items:center;gap:var(--sp-3);
+  padding:10px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-text{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--c-ink)}
+.brand-text small{display:block;font-size:11px;font-weight:500;color:var(--c-ink-soft);letter-spacing:1.5px}
+.main-nav{display:flex;gap:2px;flex-wrap:wrap;flex:1 1 auto}
+.main-nav a{
+  padding:6px 11px;border-radius:999px;font-size:14px;color:var(--c-ink-soft);
+  white-space:nowrap;
+}
+.main-nav a:hover{background:var(--c-tag);color:var(--c-main-deep);text-decoration:none}
+.main-nav a.active{background:var(--c-main);color:#fff}
+.header-tools{display:flex;gap:8px;align-items:center;flex:none}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:186px;padding:7px 10px 7px 30px;border:1px solid var(--c-line);
+  border-radius:999px;background:#fff;font-size:13.5px;color:var(--c-ink);
+}
+.search-box input:focus{outline:none;border-color:var(--c-main);box-shadow:0 0 0 3px rgba(22,96,90,.15)}
+.search-box .mag{position:absolute;left:9px;width:14px;height:14px;opacity:.55}
+.search-result{
+  position:absolute;top:calc(100% + 6px);right:0;width:290px;max-height:320px;overflow:auto;
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow);padding:6px;display:none;font-size:13.5px;z-index:80;
+}
+.search-result.on{display:block}
+.search-result a{display:block;padding:6px 8px;border-radius:6px;color:var(--c-ink)}
+.search-result a:hover{background:var(--c-tag);text-decoration:none}
+.search-result .empty{padding:10px;color:var(--c-ink-soft)}
+.menu-btn{
+  display:none;background:#fff;border:1px solid var(--c-line);border-radius:999px;
+  padding:7px 14px;font-size:14px;cursor:pointer;color:var(--c-ink);
+}
+.wrap{width:min(1180px,100% - 36px);margin-inline:auto}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 420px at 82% -10%,rgba(201,84,47,.14),transparent 62%),
+    radial-gradient(760px 360px at 6% 108%,rgba(22,96,90,.16),transparent 60%),
+    var(--c-bg);
+  border-bottom:1px solid var(--c-line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:var(--sp-5);align-items:center;padding:var(--sp-6) 0 var(--sp-5);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;
+  color:var(--c-main-deep);background:#fff;border:1px solid var(--c-line);
+  padding:4px 12px;border-radius:999px;margin-bottom:var(--sp-2);
+}
+.eyebrow .bar{width:18px;height:3px;background:var(--c-accent);border-radius:2px}
+.hero h1{font-size:clamp(28px,4.4vw,44px);letter-spacing:1px;margin-bottom:var(--sp-2)}
+.hero-lead{color:var(--c-ink-soft);font-size:16.5px;max-width:36em}
+.hero-lead strong{color:var(--c-ink)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--sp-3)}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600;
+  border:1px solid transparent;transition:transform .16s ease,box-shadow .16s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.btn-main{background:var(--c-main);color:#fff}
+.btn-main:hover{background:var(--c-main-deep);color:#fff}
+.btn-ghost{background:#fff;color:var(--c-main-deep);border-color:var(--c-line)}
+.hero-stats{display:flex;gap:var(--sp-4);flex-wrap:wrap;margin-top:var(--sp-4)}
+.hero-stats div{min-width:88px}
+.hero-stats b{display:block;font-size:24px;color:var(--c-main-deep);letter-spacing:.5px}
+.hero-stats span{font-size:12.5px;color:var(--c-ink-soft)}
+.hero-art{position:relative;aspect-ratio:1/.92;min-height:280px}
+.hero-art svg{width:100%;height:100%}
+.art-badge{
+  position:absolute;background:#fff;border:1px solid var(--c-line);border-radius:10px;
+  padding:7px 12px;font-size:12.5px;box-shadow:var(--shadow-sm);color:var(--c-ink);
+}
+.art-badge.b1{top:8%;left:0}
+.art-badge.b2{bottom:12%;right:0}
+.art-badge b{color:var(--c-accent)}
+
+/* ---------- sections ---------- */
+main{padding-bottom:var(--sp-6)}
+.section{padding:var(--sp-5) 0 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);margin-bottom:var(--sp-3);flex-wrap:wrap}
+.sec-head h2{font-size:clamp(20px,2.6vw,26px)}
+.sec-head h2 .idx{color:var(--c-accent);font-size:.72em;letter-spacing:2px;margin-right:8px;font-weight:700}
+.sec-head p{color:var(--c-ink-soft);font-size:14px;margin:0;max-width:46em}
+.more-link{font-size:13.5px;white-space:nowrap;border-bottom:1px dashed var(--c-main);color:var(--c-main-deep)}
+
+.card{background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--radius)}
+.pad{padding:var(--sp-3)}
+.grid{display:grid;gap:var(--sp-3)}
+
+/* channel index */
+.channel-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.channel{
+  display:block;background:#fff;border:1px solid var(--c-line);border-radius:12px;
+  padding:14px 14px 12px;transition:transform .16s ease,border-color .16s ease;
+}
+.channel:hover{transform:translateY(-3px);border-color:#c9c0b2;text-decoration:none}
+.channel b{display:block;font-size:15.5px;color:var(--c-ink)}
+.channel span{display:block;font-size:12.5px;color:var(--c-ink-soft);margin-top:2px}
+.channel em{font-style:normal;font-size:11.5px;color:var(--c-accent);letter-spacing:.5px}
+
+/* featured cards */
+.feat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.feat-card{overflow:hidden;display:flex;flex-direction:column}
+.feat-card img{width:100%;height:170px;object-fit:cover;background:#ddd6ca}
+.feat-card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.feat-card h3{font-size:16.5px}
+.feat-card p{font-size:13.8px;color:var(--c-ink-soft);margin:0;flex:1}
+.meta-row{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--c-ink-soft);align-items:center}
+.tag{display:inline-block;background:var(--c-tag);color:var(--c-main-deep);border-radius:999px;padding:2px 9px;font-size:11.8px}
+.tag.accent{background:var(--c-accent-soft);color:#8f3a1e}
+
+/* columns */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 322px;gap:var(--sp-4);align-items:start}
+.side{position:sticky;top:var(--sticky-h);display:flex;flex-direction:column;gap:var(--sp-3)}
+.side-box{background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);padding:14px 16px}
+.side-box h3{font-size:14.5px;margin-bottom:8px;letter-spacing:.5px}
+.side-nav a{display:block;padding:6px 9px;border-radius:8px;font-size:13.6px;color:var(--c-ink-soft);border-left:3px solid transparent}
+.side-nav a:hover{background:var(--c-tag);text-decoration:none;color:var(--c-main-deep)}
+.side-nav a.on{color:var(--c-main-deep);background:var(--c-tag);border-left-color:var(--c-main);font-weight:600}
+
+/* list updates */
+.update-list{list-style:none;padding:0;margin:0}
+.update-list li{
+  display:flex;gap:12px;padding:11px 2px;border-bottom:1px dashed var(--c-line);
+  font-size:14.2px;align-items:baseline;flex-wrap:wrap;
+}
+.update-list li:last-child{border-bottom:0}
+.update-list time{font-variant-numeric:tabular-nums;color:var(--c-gold);font-size:12.5px;flex:none;min-width:66px;font-weight:600}
+.update-list b{font-weight:600;color:var(--c-ink)}
+.update-list .desc{color:var(--c-ink-soft);font-size:13px;flex:1 1 220px}
+
+/* deep analysis */
+.deep{
+  background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);
+  padding:var(--sp-4);
+}
+.deep h2{font-size:25px;margin-bottom:6px}
+.deep .kicker{font-size:13px;color:var(--c-accent);letter-spacing:1.5px;margin-bottom:10px}
+.deep h3{font-size:17.5px;margin:var(--sp-4) 0 8px;padding-left:11px;border-left:4px solid var(--c-gold)}
+.deep p{font-size:15.2px;color:#2a3040}
+.deep .pull{
+  background:var(--c-accent-soft);border-left:4px solid var(--c-accent);
+  padding:12px 16px;border-radius:0 10px 10px 0;margin:var(--sp-3) 0;
+  font-size:15px;
+}
+.deep .pull b{color:#8f3a1e}
+.compare{width:100%;border-collapse:collapse;font-size:14px;margin:var(--sp-3) 0}
+.compare th,.compare td{border:1px solid var(--c-line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare th{background:var(--c-tag);font-weight:600;font-size:13.2px}
+.compare td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.checklist{list-style:none;padding:0;margin:var(--sp-2) 0}
+.checklist li{padding-left:24px;position:relative;font-size:14.6px;margin-bottom:6px}
+.checklist li::before{content:"✓";position:absolute;left:0;color:var(--c-main);font-weight:700}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sp-2);counter-reset:s}
+.step{
+  background:#fff;border:1px solid var(--c-line);border-radius:12px;padding:14px;
+  position:relative;
+}
+.step::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-size:12px;font-weight:700;color:#fff;background:var(--c-main);
+  border-radius:8px;padding:2px 7px;display:inline-block;margin-bottom:8px;
+}
+.step b{display:block;font-size:15px;margin-bottom:4px}
+.step p{font-size:13.4px;color:var(--c-ink-soft);margin:0}
+
+/* ranking */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--c-line);align-items:flex-start}
+.rank li:last-child{border-bottom:0}
+.rank .no{
+  counter-increment:r;font-weight:800;color:var(--c-accent);font-size:18px;
+  min-width:26px;font-variant-numeric:tabular-nums;
+}
+.rank .no::before{content:counter(r)}
+.rank .txt b{display:block;font-size:15px}
+.rank .txt span{font-size:13.2px;color:var(--c-ink-soft)}
+.rank .score{margin-left:auto;font-size:13px;color:var(--c-main-deep);font-weight:700;white-space:nowrap}
+
+/* faq */
+details.faq{
+  background:#fff;border:1px solid var(--c-line);border-radius:12px;
+  padding:0;margin-bottom:9px;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:13px 44px 13px 16px;font-size:15px;font-weight:600;
+  position:relative;list-style:none;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--c-main);font-weight:400;line-height:1;
+}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 16px 15px;font-size:14.4px;color:var(--c-ink-soft)}
+
+/* comments */
+.cmt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.cmt-card{background:#fff;border:1px solid var(--c-line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:8px}
+.cmt-card .who{display:flex;gap:9px;align-items:center}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--c-tag);display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--c-main-deep);flex:none}
+.cmt-card .who b{font-size:13.8px;display:block;line-height:1.3}
+.cmt-card .who span{font-size:11.5px;color:var(--c-ink-soft)}
+.cmt-card p{font-size:14.2px;margin:0;color:#2a3040}
+.cmt-card .ref{font-size:12px;color:var(--c-gold)}
+
+/* tags index */
+.tagcloud{display:flex;flex-wrap:wrap;gap:9px}
+.tagcloud a{
+  background:#fff;border:1px solid var(--c-line);border-radius:999px;
+  padding:6px 14px;font-size:13.6px;color:var(--c-ink);transition:transform .16s ease,border-color .16s ease;
+}
+.tagcloud a:hover{transform:translateY(-2px);border-color:var(--c-accent);color:var(--c-accent);text-decoration:none}
+.tagcloud a .n{color:var(--c-ink-soft);font-size:11.8px;margin-left:5px}
+
+/* news */
+.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.news-item{background:#fff;border:1px solid var(--c-line);border-radius:12px;padding:15px 17px}
+.news-item h3{font-size:15.6px;margin-bottom:5px}
+.news-item p{font-size:13.6px;color:var(--c-ink-soft);margin:0 0 7px}
+.news-item .meta-row{font-size:12px}
+
+/* timeline */
+.timeline{list-style:none;padding:0 0 0 18px;margin:0;border-left:2px solid var(--c-line)}
+.timeline li{position:relative;padding:0 0 var(--sp-3) 18px}
+.timeline li::before{content:"";position:absolute;left:-25px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--c-main);border:2px solid var(--c-bg)}
+.timeline b{display:block;font-size:14.8px}
+.timeline time{font-size:12.3px;color:var(--c-gold);font-weight:600}
+.timeline p{font-size:13.6px;color:var(--c-ink-soft);margin:2px 0 0}
+
+/* footer */
+footer.site-footer{background:#161a2b;color:#c6cbd8;margin-top:var(--sp-6);padding:var(--sp-5) 0 var(--sp-3)}
+footer.site-footer a{color:#dfe4ee}
+.foot-top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,2fr);gap:var(--sp-4);padding-bottom:var(--sp-4);border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.foot-brand svg{width:34px;height:34px}
+.foot-brand b{font-size:18px;color:#fff;letter-spacing:.5px}
+.foot-lead{font-size:13.6px;color:#a9b0c2;max-width:26em}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)}
+.foot-cols h4{font-size:13.5px;color:#fff;margin-bottom:8px;letter-spacing:.5px}
+.foot-cols ul{list-style:none;padding:0;margin:0}
+.foot-cols li{margin-bottom:5px}
+.foot-cols a{font-size:13.2px;color:#a9b0c2}
+.foot-cols a:hover{color:#fff}
+.foot-note{font-size:12.4px;color:#8b92a6;padding-top:var(--sp-3);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+.foot-note .upd{color:#c9a86a}
+
+/* back to top */
+#toTop{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--c-line);
+  background:#fff;color:var(--c-main-deep);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow);display:none;place-items:center;
+}
+#toTop.on{display:grid}
+#toTop:hover{transform:translateY(-2px)}
+
+@media (max-width:1024px){
+  .channel-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .feat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols{grid-template-columns:1fr}
+  .side{position:static;order:2;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cmt{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-inner{grid-template-columns:1fr;gap:var(--sp-4);padding-top:var(--sp-5)}
+  .hero-art{max-width:440px}
+  .foot-top{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  :root{--sticky-h:118px}
+  .menu-btn{display:inline-block}
+  .main-nav{
+    order:5;flex-basis:100%;display:none;padding-bottom:8px;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{border:1px solid var(--c-line);background:#fff}
+  .header-inner{gap:10px}
+  .header-tools{margin-left:auto}
+  .search-box input{width:132px}
+  .search-result{width:min(290px,92vw)}
+  .channel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feat-grid,.news-grid,.cmt,.steps,.foot-cols,.side{grid-template-columns:1fr}
+  .hero-stats{gap:var(--sp-3)}
+  .art-badge.b1{top:2%}
+  .deep{padding:var(--sp-3)}
+  .notice-bar .wrap{gap:6px 12px}
+}
+@media (max-width:360px){
+  .wrap{width:calc(100% - 24px)}
+  .channel-grid{grid-template-columns:1fr}
+  .search-box input{width:104px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.channel:hover,.tagcloud a:hover,#toTop:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-stack">
+  <div class="notice-bar">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>147西西胆大人体</b> 站内索引更新：11月6日新增摄影棚布光条目 12 条，11月7日补录人体绘画素材 7 组</span>
+      <a href="/#updates">查看更新记录</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/#top" aria-label="回到首页顶部">
+        <svg viewBox="0 0 64 64" role="img" aria-label="站点图形标志：人形剪影与取景框">
+          <rect width="64" height="64" rx="14" fill="#161a2b"></rect>
+          <rect x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="#b3893c" stroke-width="1.6" stroke-dasharray="5 4"></rect>
+          <circle cx="32" cy="24" r="8" fill="#c9542f"></circle>
+          <path d="M19 50c2-11 7-16 13-16s11 5 13 16z" fill="#e8c07a"></path>
+        </svg>
+        <span class="brand-text">147西西胆大人体<small>PHOTO · DRAWING INDEX</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#channels">频道索引</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#ranking">条目榜单</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="search-box">
+          <svg class="mag" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="#1d2233" stroke-width="2"></circle><path d="M13 13l4 4" stroke="#1d2233" stroke-width="2" stroke-linecap="round"></path></svg>
+          <input type="search" id="siteSearch" placeholder="搜索条目 / 摄影师 / 器材" aria-label="站内本地搜索">
+          <div class="search-result" id="searchResult" role="region" aria-live="polite"></div>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow"><span class="bar" aria-hidden="true"></span>成年向 · 内容索引</span>
+        <h1 id="heroTitle">147西西胆大人体</h1>
+        <p class="hero-lead">一个按<strong>拍摄手法</strong>、<strong>素材类型</strong>与<strong>授权状态</strong>编排的索引页。收录人体艺术摄影、胆大构图写真、人体速写参考图与影室灯位参数，每条记录标注首发日期、原图尺寸和来源账号，方便逐条核对后再决定是否收藏。</p>
+        <div class="hero-cta">
+          <a class="btn btn-main" href="/#channels">进入频道索引</a>
+          <a class="btn btn-ghost" href="/#deep">读布光与尺度解析</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>11</b><span>主题频道</span></div>
+          <div><b>268</b><span>已标条目</span></div>
+          <div><b>32</b><span>本周新增</span></div>
+          <div><b>5</b><span>可信度分层</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 386" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#16605a"></stop>
+              <stop offset="1" stop-color="#0f4a45"></stop>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e8c07a"></stop>
+              <stop offset="1" stop-color="#c9542f"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="14" y="14" width="392" height="358" rx="22" fill="#fff" stroke="#e2dcd2" stroke-width="1.5"></rect>
+          <rect x="48" y="52" width="324" height="212" rx="12" fill="url(#g1)"></rect>
+          <circle cx="210" cy="126" r="34" fill="url(#g2)"></circle>
+          <path d="M150 232c8-38 27-58 60-58s52 20 60 58z" fill="#f0e3cb"></path>
+          <g stroke="#e8c07a" stroke-width="1.4" opacity=".6">
+            <path d="M76 84h40M76 96h26M76 108h34"></path>
+            <path d="M344 84h-40M344 96h-26"></path>
+          </g>
+          <g fill="none" stroke="#b3893c" stroke-width="1.6" stroke-dasharray="6 5">
+            <path d="M48 180h18M354 180h18M210 264v-14"></path>
+          </g>
+          <rect x="48" y="292" width="148" height="52" rx="10" fill="#f7f4ef" stroke="#e2dcd2"></rect>
+          <rect x="210" y="292" width="162" height="52" rx="10" fill="#f7f4ef" stroke="#e2dcd2"></rect>
+          <g fill="#1d2233" font-family="PingFang SC,Microsoft YaHei,sans-serif">
+            <text x="66" y="315" font-size="12" fill="#4b5162">灯位</text>
+            <text x="66" y="333" font-size="15" font-weight="700">主光 400W·s</text>
+            <text x="228" y="315" font-size="12" fill="#4b5162">采集</text>
+            <text x="228" y="333" font-size="15" font-weight="700">EXIF + 首发日期</text>
+          </g>
+          <g fill="#c9542f">
+            <circle cx="14" cy="14" r="4"></circle><circle cx="406" cy="14" r="4"></circle>
+            <circle cx="14" cy="372" r="4"></circle><circle cx="406" cy="372" r="4"></circle>
+          </g>
+        </svg>
+        <span class="art-badge b1">构图尺度 <b>四级标注</b></span>
+        <span class="art-badge b2">来源核验 <b>3 步</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 领域概览 -->
+  <section class="section" id="overview" aria-labelledby="overviewTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="overviewTitle"><span class="idx">01</span>领域概览：从照片到速写的四类素材</h2>
+          <p>人体影像在创作链上分属不同用途，判断标准也不同。下面四类覆盖了索引里 92% 的条目。</p>
+        </div>
+      </div>
+      <div class="grid channel-grid">
+        <a class="channel" href="/#channels">
+          <em>摄影 · 成品</em>
+          <b>人体艺术摄影</b>
+          <span>影室与自然光成品，标注灯位和后期范围</span>
+        </a>
+        <a class="channel" href="/#channels">
+          <em>摄影 · 构图</em>
+          <b>胆大构图写真</b>
+          <span>近距离、低角度、大面积留白的构图样本</span>
+        </a>
+        <a class="channel" href="/#channels">
+          <em>绘画 · 参考</em>
+          <b>人体速写参考图</b>
+          <span>关节清晰、单光源，适合明暗与比例练习</span>
+        </a>
+        <a class="channel" href="/#channels">
+          <em>器材 · 参数</em>
+          <b>影室灯位与器材</b>
+          <span>功率、回电、柔光箱尺寸与场地电源</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 频道索引 -->
+  <section class="section" id="channels" aria-labelledby="channelsTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="channelsTitle"><span class="idx">02</span>频道索引：11 个可直接入手的分类</h2>
+          <p>频道按素材形态划分，不用泛词。点进去只看该类条目，日期与可信度分层沿用同一套规则。</p>
+        </div>
+        <a class="more-link" href="/#updates">看今天新增了什么</a>
+      </div>
+      <div class="grid channel-grid">
+        <a class="channel" href="/#channels"><b>黑白人体摄影</b><span>灰阶层次与胶片颗粒，37 条</span></a>
+        <a class="channel" href="/#channels"><b>逆光轮廓写真</b><span>边缘光与雾气，24 条</span></a>
+        <a class="channel" href="/#channels"><b>棚拍低角度构图</b><span>仰拍与广角变形，18 条</span></a>
+        <a class="channel" href="/#channels"><b>人体线稿素材</b><span>单色线稿与速写，41 条</span></a>
+        <a class="channel" href="/#channels"><b>明暗交界练习图</b><span>侧光柔光对照，29 条</span></a>
+        <a class="channel" href="/#channels"><b>自然光窗边机位</b><span>窗光与纱帘漫射，22 条</span></a>
+        <a class="channel" href="/#channels"><b>影室灯位图集</b><span>主辅光功率与角度，33 条</span></a>
+        <a class="channel" href="/#channels"><b>胶片扫描与颗粒</b><span>120 中画幅扫描样本，16 条</span></a>
+        <a class="channel" href="/#channels"><b>姿态与比例参考</b><span>站姿坐姿与透视，26 条</span></a>
+        <a class="channel" href="/#channels"><b>摄影授权说明</b><span>署名、可商用与否，15 条</span></a>
+        <a class="channel" href="/#channels"><b>创作者访谈</b><span>布光过程与取舍，7 条</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 精选推荐 -->
+  <section class="section" id="featured" aria-labelledby="featTitle">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="featTitle"><span class="idx">03</span>精选推荐：本周值得细看的三组</h2>
+          <p>入选项要求原图可下载、署名完整、拍摄日期明确。三组各代表一种用途。</p>
+        </div>
+      </div>
+      <div class="grid feat-grid">
+        <article class="feat-card card">
+          <img src="https://picsum.photos/seed/147xx-softlight/640/380" width="640" height="380" loading="lazy" alt="窗边柔光下的人体侧影，纱帘形成大面积漫射光">
+          <div class="body">
+            <div class="meta-row"><span class="tag accent">精选</span><time datetime="2026-11-05">11月5日</time><span>摄影</span></div>
+            <h3>窗纱漫射光的侧影练习</h3>
+            <p>机位距人物 2.1 米，85mm 定焦，F2.0。窗外阴天，纱帘离窗 40 厘米，脸部与肩部的明暗差控制在两档以内，适合练柔光过渡。</p>
+            <div class="meta-row"><span>@laurel_studio</span><span>原图 6000×4000</span></div>
+          </div>
+        </article>
+        <article class="feat-card card">
+          <img src="https://picsum.photos/seed/147xx-rimlight/640/380" width="640" height="380" loading="lazy" alt="逆光下人体轮廓边缘的亮线，背景为灰色影室布">
+          <div class="body">
+            <div class="meta-row"><span class="tag">构图</span><time datetime="2026-11-03">11月3日</time><span>摄影</span></div>
+            <h3>逆光轮廓的三灯位拆解</h3>
+            <p>主光 300W·s 加蜂窝罩，轮廓光 400W·s 加窄光栅，背景补 100W·s。轮廓线宽 3—5 厘米，过曝控制在 0.7 档。</p>
+            <div class="meta-row"><span>@studio_k7</span><span>原图 5464×8192</span></div>
+          </div>
+        </article>
+        <article class="feat-card card">
+          <img src="https://picsum.photos/seed/147xx-sketchpose/640/380" width="640" height="380" loading="lazy" alt="单光源下人物坐姿参考图，关节与肌肉走向清晰">
+          <div class="body">
+            <div class="meta-row"><span class="tag">参考图</span><time datetime="2026-10-29">10月29日</time><span>绘画</span></div>
+            <h3>坐姿速写的关节可辨性检查</h3>
+            <p>同一坐姿拍了正面与 45° 两张，膝、肘、锁骨三处不被衣物遮挡。地面贴标尺，便于换算透视缩短比例。</p>
+            <div class="meta-row"><span>@drawref_cn</span><span>标注 6 处</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主体双栏：左正文 + 右侧栏 -->
+  <div class="wrap section cols" id="deep">
+    <div>
+
+      <!-- 04 深度解析 -->
+      <article class="deep" aria-labelledby="deepTitle">
+        <div class="kicker">DEEP READ · 唯一主体阅读区</div>
+        <h2 id="deepTitle"><span style="display:none">04</span>“胆大”的尺度究竟由什么决定</h2>
+        <p>10 月 24 日到一个 11 月 2 日的两组棚拍样本，被同一批收藏者反复对比。争议集中在一句话：同样是人体摄影，为什么有的组图被收藏者称为“胆大”，有的只被当作常规写真。把两组参数摊开来看，差别不在曝光，而在构图选择和呈现尺度标注的清晰度。</p>
+
+        <h3>判断一：构图距离比姿态更决定观看感受</h3>
+        <p>样组 A（10月24日，摄影师 @studio_k7）用了 35mm 广角，机位离人物 1.2 米，画面里头部被裁到眉线，身体占据 78% 画幅。样组 B（11月2日，@laurel_studio）用 85mm，机位 3.4 米，全身入画，身体占 41%。两组都没有越过平台的内容规则，但 A 被 23 条收藏备注标了“胆大”，B 只有 4 条。构图距离和裁切比例，比姿态本身更能触发这种标注。</p>
+
+        <table class="compare">
+          <thead>
+            <tr><th>对比项</th><th>样组 A（10-24）</th><th>样组 B（11-02）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>焦段与机位距离</td><td class="num">35mm / 1.2 米</td><td class="num">85mm / 3.4 米</td></tr>
+            <tr><td>身体占画幅</td><td class="num">78%</td><td class="num">41%</td></tr>
+            <tr><td>头部裁切</td><td>裁至眉线</td><td>完整入画</td></tr>
+            <tr><td>收藏备注含“胆大”</td><td class="num">23 条</td><td class="num">4 条</td></tr>
+            <tr><td>主光功率</td><td class="num">400W·s</td><td class="num">400W·s</td></tr>
+          </tbody>
+        </table>
+
+        <p>这组数字能被人反驳，也可以自己复核：两份原图都可在对应账号找到，EXIF 保留着焦段和光圈。真正需要留意的是，广角近距离会带来明显的透视拉伸，大腿与手部的比例会被放大。把它当成风格可以，当成写实样本则不合适。</p>
+
+        <h3>判断二：可信度分层能挡掉一部分误传</h3>
+        <p>11 月 6 日核对时，同一组标为“胆大构图”的图在三个转发帖里日期对不上：两个写 10 月 18 日，一个写 10 月 21 日，但原帖的拍摄日期栏是 10 月 17 日。这属于典型的二次转载丢字段。索引采用五层标注，其中 A 层要求原图、EXIF 和署名三者齐全，B 层缺 EXIF，C 层只有低分辨率图，D 层来源不明，E 层为人工重绘。</p>
+        <ul class="checklist">
+          <li>核对原图像素：短边低于 1600 像素的，多半是二次压缩。</li>
+          <li>看拍摄日期字段是否与原帖文案一致，不一致按转载处理。</li>
+          <li>查摄影师账号是否存在同名图集，没有则标注“待确认”。</li>
+          <li>同一图集跨平台出现时，以最早发布的那条为基准日期。</li>
+        </ul>
+
+        <div class="pull">
+          <b>可被引用的判断：</b>呈现尺度的争议，八成来自转载链里的字段丢失，而不是拍摄本身。把拍摄日期、焦段、原图尺寸三项固定下来，标注就能被复核。
+        </div>
+
+        <h3>判断三：器材参数只有在同一光源下才有可比性</h3>
+        <p>10 月 29 日一条器材对比帖把 300W·s 与 600W·s 的成片并排放，结论是“功率大就通透”。这个结论在柔和光位里站不住：600W·s 那组配的是 1.5 米柔光箱，距人物 1.1 米；300W·s 那组配的是 90 厘米方形柔光箱，距人物 2 米。光斑相对面积差了近一倍，参数被混淆了。同一光位下，300W·s 回电约 1.2 秒，600W·s 约 2.1 秒，连拍时的取舍要考虑这个差值。</p>
+
+        <h3>判断四：速度与合规要分开记</h3>
+        <p>把“尺度大”和“内容违规”当成同义词是常见误解。索引里凡是标注 A 层的条目，都附带拍摄授权说明；而没有授权说明的，不论构图保守还是大胆，一律降到 D 层。这个规则在 11 月 1 日调整过：此前只看原图，现在把署名与授权单列一栏。</p>
+      </article>
+
+      <!-- 05 最新更新 -->
+      <section class="section" id="updates" aria-labelledby="updTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="updTitle"><span class="idx">05</span>最新更新：按日期排列的条目</h2>
+            <p>列表里的时间指录入时间，拍摄日期在详情中单列。相差 30 天以上会标“转载”。</p>
+          </div>
+        </div>
+        <div class="card pad">
+          <ul class="update-list">
+            <li><time datetime="2026-11-08">今天</time><b>逆光轮廓写真</b><span class="desc">补入 @studio_k7 的窄光栅布光参数，含主光角度与背景补光。</span></li>
+            <li><time datetime="2026-11-07">昨天</time><b>人体线稿素材</b><span class="desc">新增 7 组单色线稿，均标关节可辨点与透视缩短比。</span></li>
+            <li><time datetime="2026-11-06">11月6日</time><b>影室灯位图集</b><span class="desc">录入 12 条功率记录，400W·s 与 600W·s 的回电时间对照。</span></li>
+            <li><time datetime="2026-11-04">11月4日</time><b>胶片扫描与颗粒</b><span class="desc">120 中画幅扫描 3 张，附扫描分辨率与颗粒密度描述。</span></li>
+            <li><time datetime="2026-11-02">11月2日</time><b>自然光窗边机位</b><span class="desc">修订窗纱距离参数，纱帘离窗由 30 厘米改为 40 厘米。</span></li>
+            <li><time datetime="2026-10-30">10月30日</time><b>摄影授权说明</b><span class="desc">新增“可商用 / 仅个人练习”二分标注，覆盖 15 条旧记录。</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 06 体验指南 -->
+      <section class="section" id="guide" aria-labelledby="guideTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="guideTitle"><span class="idx">06</span>体验指南：四步筛出可用素材</h2>
+            <p>从打开一个条目到决定是否使用，这条顺序能省掉大部分回头核对。</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><b>先看分层</b><p>A 层到 E 层写在标题下方。缺授权说明的，不论构图如何都按 D 层读。</p></div>
+          <div class="step"><b>核对日期</b><p>拍摄日期与录入日期分开看。相差 30 天以上，原帖可能已删。</p></div>
+          <div class="step"><b>量光位</b><p>记下主光功率、柔光箱尺寸和机位距离。三项缺一，参数没法复用。</p></div>
+          <div class="step"><b>再决定用途</b><p>练轮廓选正面强光，练过渡选侧逆光。同一批素材不要混两种光源。</p></div>
+        </div>
+      </section>
+
+      <!-- 07 榜单 -->
+      <section class="section" id="ranking" aria-labelledby="rankTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="rankTitle"><span class="idx">07</span>条目榜单：按复核通过率排的前五</h2>
+            <p>评分只看可核对项：原图、EXIF、署名、授权说明四项，各占 25 分。</p>
+          </div>
+        </div>
+        <div class="card pad">
+          <ol class="rank">
+            <li><span class="no"></span><span class="txt"><b>棚拍低角度构图的透视样本</b><span>四项齐全，35mm 段数与机位距离均有原始记录</span></span><span class="score">96 分</span></li>
+            <li><span class="no"></span><span class="txt"><b>逆光轮廓的三灯位拆解</b><span>EXIF 完整，窄光栅角度注明到 15°</span></span><span class="score">93 分</span></li>
+            <li><span class="no"></span><span class="txt"><b>明暗交界练习图的侧光组</b><span>缺柔光箱型号，其余三项齐全</span></span><span class="score">85 分</span></li>
+            <li><span class="no"></span><span class="txt"><b>窗纱漫射光的侧影练习</b><span>授权说明写明仅个人练习，商用需另询</span></span><span class="score">81 分</span></li>
+            <li><span class="no"></span><span class="txt"><b>坐姿速写的关节可辨性检查</b><span>原图短边 1600 像素，刚过 A 层线</span></span><span class="score">78 分</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 08 FAQ -->
+      <section class="section" id="faq" aria-labelledby="faqTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="faqTitle"><span class="idx">08</span>常见问题：来源、参数与标注</h2>
+            <p>问题来自收藏备注与站内搜索词，答案只讲可核对的字段。</p>
+          </div>
+        </div>
+        <details class="faq" open>
+          <summary>人体艺术摄影里的“胆大”具体指什么？</summary>
+          <div class="ans">在摄影语境里，“胆大”通常指构图与姿态对身体轮廓的呈现更直接，例如大面积留白、低角度逆光或拉近机位。它描述的是拍摄手法与呈现尺度，不等于内容合规性。收藏前仍要看授权说明和原图字段是否齐全。</div>
+        </details>
+        <details class="faq">
+          <summary>怎么判断一组人体写真的来源可靠？</summary>
+          <div class="ans">先看署名摄影师账号与拍摄日期，再查原图分辨率与 EXIF 是否完整，最后对同一组图反向搜索首发平台。三项对不上时，按转载链处理，日期以最早发布的那条为准。</div>
+        </details>
+        <details class="faq">
+          <summary>人体速写参考图该按什么标准筛？</summary>
+          <div class="ans">按光源方向、关节可辨度、肤色层次三项筛选。正面强光高对比适合练轮廓，侧逆光柔光适合练明暗过渡。同一批练习不要混用两种光源，否则灰阶判断会失准。</div>
+        </details>
+        <details class="faq">
+          <summary>影室灯通常配多大功率，回电时间差多少？</summary>
+          <div class="ans">常见配置是两盏 400W·s 影室灯，加 1.5 米柔光箱与一支反光板。400W·s 满功率回电约 1.2 秒，600W·s 约 2.1 秒。连拍前要算回电，否则第二张会欠曝。</div>
+        </details>
+        <details class="faq">
+          <summary>为什么同一组图的日期在不同条目里不一致？</summary>
+          <div class="ans">首发时间、转载时间、录入时间是三个字段。列表显示录入时间，详情页记首发日期。两者相差超过 30 天时，条目上会加注“转载”，提醒回原帖核对。</div>
+        </details>
+      </section>
+
+      <!-- 09 用户评论 -->
+      <section class="section" id="comments" aria-labelledby="cmtTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="cmtTitle"><span class="idx">09</span>用户评论：对具体条目的反馈</h2>
+            <p>评论保留不同语气，包含吐槽。指向条目的意见直接列出名称。</p>
+          </div>
+        </div>
+        <div class="cmt">
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">林</span><div><b>林间小调</b><span>收藏 214 条</span></div></div>
+            <p>“窗纱漫射光的侧影练习”那组的明暗差控制得确实细，肩部过渡没出现断阶。就是原图下载要登录两次，体验一般。</p>
+            <span class="ref">指向：窗纱漫射光的侧影练习</span>
+          </div>
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">阿</span><div><b>阿枢_速写本</b><span>绘画练习者</span></div></div>
+            <p>坐姿速写那两张标了尺子，换算透视缩短比方便多了。比只放成品图的帖子实用，但角度只有正面和 45°，希望补侧面。</p>
+            <span class="ref">指向：坐姿速写的关节可辨性检查</span>
+          </div>
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">K</span><div><b>K7_灯位笔记</b><span>摄影从业者</span></div></div>
+            <p>逆光那组的窄光栅角度写 15°，实际成片的轮廓线宽看起来不只 3 厘米，估计是有背景补光参与。参数可以再标细一点。</p>
+            <span class="ref">指向：逆光轮廓的三灯位拆解</span>
+          </div>
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">慢</span><div><b>慢速快门</b><span>胶片玩家</span></div></div>
+            <p>胶片扫描那三条颗粒描述太笼统。120 中画幅只写“颗粒细”没有意义，至少要给扫描仪型号和扫描分辨率。</p>
+            <span class="ref">指向：胶片扫描与颗粒</span>
+          </div>
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">柚</span><div><b>柚子茶不加冰</b><span>普通浏览者</span></div></div>
+            <p>榜单评分标准写清楚了，这点比别处强。不过只排前五有点少，30 条以上的频道应该单独出一份。</p>
+            <span class="ref">指向：条目榜单</span>
+          </div>
+          <div class="cmt-card">
+            <div class="who"><span class="avatar">一</span><div><b>一叶知秋</b><span>摄影爱好者</span></div></div>
+            <p>授权说明改成二分标注后，判断快了不少。但有的条目只写“联系作者”，这种既不算可商用也不算禁止，仍要自己问。</p>
+            <span class="ref">指向：摄影授权说明</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 相关资讯 -->
+      <section class="section" id="news" aria-labelledby="newsTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="newsTitle"><span class="idx">10</span>相关资讯：日期、平台与原文措辞</h2>
+            <p>每条标明来源账号与发布时间，便于回查原帖。</p>
+          </div>
+        </div>
+        <div class="grid news-grid">
+          <article class="news-item">
+            <h3>@studio_k7 公布 10 月棚拍布光表</h3>
+            <p>帖子写“主光 400W·s，蜂窝罩 20°，距人物 1.6 米”，评论区有人指出背景补光未列功率。原帖 10 月 24 日发布，10 月 26 日编辑过一次。</p>
+            <div class="meta-row"><span>10月24日</span><span class="tag">布光</span></div>
+          </article>
+          <article class="news-item">
+            <h3>@laurel_studio 说明窗边机位改法</h3>
+            <p>原文措辞是“纱帘离窗 40 厘米后，脸部落差更平”，配图对比了 30 厘米与 40 厘米两版。10 月 28 日发布，未提后期范围。</p>
+            <div class="meta-row"><span>10月28日</span><span class="tag">自然光</span></div>
+          </article>
+          <article class="news-item">
+            <h3>线稿作者 @drawref_cn 更正比例标注</h3>
+            <p>11 月 1 日的补充帖承认 10 月 29 日那批线稿里有两张透视缩短比标错，已替换文件，并在文件名加了 rev2。</p>
+            <div class="meta-row"><span>11月1日</span><span class="tag">更正</span></div>
+          </article>
+          <article class="news-item">
+            <h3>影室器材商发布回电时间实测</h3>
+            <p>品牌账号 11 月 3 日给出 400W·s 满功率回电 1.2 秒、600W·s 为 2.1 秒的实测值，测试条件写明室温 24℃、电压 220V。</p>
+            <div class="meta-row"><span>11月3日</span><span class="tag">器材</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 11 创作者证言 -->
+      <section class="section" id="voices" aria-labelledby="voiceTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="voiceTitle"><span class="idx">11</span>创作者证言：布光取舍与失败记录</h2>
+            <p>来自站内访谈的摘录，保留原话结构与具体数字。</p>
+          </div>
+        </div>
+        <div class="card pad">
+          <blockquote style="margin:0 0 16px;padding-left:14px;border-left:3px solid var(--c-gold);font-size:14.8px;">
+            “35mm 放在一米二，透视拉伸必然出现。我第一次拍把小腿拉得比头还长，后来把机位抬到胸口高度，缩短才回到可接受范围。”——@studio_k7，10 月 24 日访谈
+          </blockquote>
+          <blockquote style="margin:0;padding-left:14px;border-left:3px solid var(--c-gold);font-size:14.8px;">
+            “窗光最怕阴天转晴，十分钟内色温和反差一起变。我现在每拍五张记一次时间，后期对灰阶时按时间段分两组处理。”——@laurel_studio，10 月 28 日访谈
+          </blockquote>
+          <ul class="timeline" style="margin-top:18px;">
+            <li><time datetime="2026-10-17">10月17日</time><b>首轮棚拍</b><p>两组灯位对比，因背景补光未列功率，成片被判为参数不全。</p></li>
+            <li><time datetime="2026-10-24">10月24日</time><b>补拍并公开布光表</b><p>加蜂窝罩，主光距离标到 1.6 米，窄光栅角度写明 15°。</p></li>
+            <li><time datetime="2026-11-02">11月2日</time><b>窗边机位修订</b><p>纱帘距离从 30 厘米改到 40 厘米，脸部明暗差从 2.6 档降到 2.0 档。</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 12 相关推荐 -->
+      <section class="section" id="related" aria-labelledby="relTitle">
+        <div class="sec-head">
+          <div>
+            <h2 id="relTitle"><span class="idx">12</span>相关推荐：按搜索词聚合的标签</h2>
+            <p>每个标签对应一类条目，括号内是当前收录数。</p>
+          </div>
+        </div>
+        <div class="tagcloud">
+          <a href="/#channels">逆光轮廓写真 <span class="n">24</span></a>
+          <a href="/#channels">棚拍低角度构图 <span class="n">18</span></a>
+          <a href="/#channels">黑白人体摄影 <span class="n">37</span></a>
+          <a href="/#channels">人体线稿素材 <span class="n">41</span></a>
+          <a href="/#channels">明暗交界练习图 <span class="n">29</span></a>
+          <a href="/#channels">自然光窗边机位 <span class="n">22</span></a>
+          <a href="/#channels">影室灯位图集 <span class="n">33</span></a>
+          <a href="/#channels">胶片扫描与颗粒 <span class="n">16</span></a>
+          <a href="/#channels">姿态与比例参考 <span class="n">26</span></a>
+          <a href="/#channels">摄影授权说明 <span class="n">15</span></a>
+          <a href="/#channels">关节可辨性 <span class="n">12</span></a>
+          <a href="/#channels">回电时间对照 <span class="n">9</span></a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="侧栏导航与提示">
+      <div class="side-box side-nav" id="sideNav">
+        <h3>页面目录</h3>
+        <a href="/#overview">领域概览</a>
+        <a href="/#channels">频道索引</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#ranking">条目榜单</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#voices">创作者证言</a>
+        <a href="/#related">相关推荐</a>
+      </div>
+      <div class="side-box">
+        <h3>可信度分层速查</h3>
+        <ul style="list-style:none;padding:0;margin:0;font-size:13.4px;color:var(--c-ink-soft);">
+          <li style="margin-bottom:6px;"><b style="color:var(--c-main-deep)">A 层</b> 原图 + EXIF + 署名齐全</li>
+          <li style="margin-bottom:6px;"><b style="color:var(--c-main-deep)">B 层</b> 缺 EXIF，其余齐全</li>
+          <li style="margin-bottom:6px;"><b style="color:var(--c-gold)">C 层</b> 仅低分辨率图</li>
+          <li style="margin-bottom:6px;"><b style="color:var(--c-accent)">D 层</b> 来源不明或缺授权</li>
+          <li><b style="color:var(--c-accent)">E 层</b> 人工重绘或二次加工</li>
+        </ul>
+      </div>
+      <div class="side-box">
+        <h3>本周条目数据</h3>
+        <p style="font-size:13.4px;color:var(--c-ink-soft);margin:0;">
+          新增 32 条，其中 A 层 11 条、B 层 13 条、C 层 5 条、D 层 3 条。带授权说明的占 68%，比上周高 4 个百分点。
+        </p>
+      </div>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#242a40"></rect>
+            <circle cx="32" cy="24" r="8" fill="#c9542f"></circle>
+            <path d="M19 50c2-11 7-16 13-16s11 5 13 16z" fill="#e8c07a"></path>
+          </svg>
+          <b>147西西胆大人体</b>
+        </div>
+        <p class="foot-lead">成年用户的人体影像索引：每条记录留下拍摄日期、焦段和授权状态，方便逐项核对后使用。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>频道</h4>
+          <ul>
+            <li><a href="/#channels">黑白人体摄影</a></li>
+            <li><a href="/#channels">逆光轮廓写真</a></li>
+            <li><a href="/#channels">人体线稿素材</a></li>
+            <li><a href="/#channels">影室灯位图集</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>阅读</h4>
+          <ul>
+            <li><a href="/#deep">尺度与构图解析</a></li>
+            <li><a href="/#guide">素材筛选四步</a></li>
+            <li><a href="/#ranking">条目榜单</a></li>
+            <li><a href="/#voices">创作者证言</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>说明</h4>
+          <ul>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#updates">更新记录</a></li>
+            <li><a href="/#related">相关推荐标签</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>内容含示例条目与演示数据，日期以 2026-11-08 为参考基准；仅面向成年用户。</span>
+      <span class="upd">正文可核对更新：11月6日灯位条目 12 条、11月7日线稿 7 组、11月8日逆光参数补充</span>
+      <span>© 2026 147西西胆大人体 · 版权保留</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var mainNav=document.getElementById('mainNav');
+  if(menuBtn&&mainNav){
+    menuBtn.addEventListener('click',function(){
+      var open=mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    mainNav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.main-nav a, .side-nav a'));
+  var sections=Array.prototype.slice.call(document.querySelectorAll('main [id]'));
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  function onScroll(){
+    var y=window.scrollY+140;
+    var cur='';
+    sections.forEach(function(s){ if(s.offsetTop<=y) cur=s.id; });
+    sideLinks.forEach(function(a){
+      a.classList.toggle('on', a.getAttribute('href')==='/# '+cur || a.getAttribute('href')==='#'+cur || a.getAttribute('href')==='/'+ '#'+cur);
+    });
+    var bt=document.getElementById('toTop');
+    if(window.scrollY>420){bt.classList.add('on');}else{bt.classList.remove('on');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+
+  var toTop=document.getElementById('toTop');
+  toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+  var input=document.getElementById('siteSearch');
+  var box=document.getElementById('searchResult');
+  var index=[
+    {t:'窗纱漫射光的侧影练习',h:'/#featured',k:'自然光 窗边 85mm 柔光'},
+    {t:'逆光轮廓的三灯位拆解',h:'/#featured',k:'逆光 轮廓光 400W 窄光栅'},
+    {t:'坐姿速写的关节可辨性检查',h:'/#featured',k:'速写 比例 透视'},
+    {t:'影室灯位图集',h:'/#channels',k:'影室 灯位 功率 回电'},
+    {t:'黑白人体摄影',h:'/#channels',k:'黑白 胶片 灰阶'},
+    {t:'人体线稿素材',h:'/#channels',k:'线稿 速写 单色'},
+    {t:'明暗交界练习图',h:'/#channels',k:'侧光 柔光 明暗'},
+    {t:'可信度分层速查',h:'/#deep',k:'A层 B层 来源 核验'},
+    {t:'条目榜单评分',h:'/#ranking',k:'榜单 评分 复核'},
+    {t:'摄影授权说明',h:'/#channels',k:'授权 商用 署名'},
+    {t:'回电时间对照',h:'/#news',k:'400W 600W 回电'},
+    {t:'创作者访谈 布光取舍',h:'/#voices',k:'访谈 失败 机位'}
+  ];
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function render(q){
+    q=(q||'').trim();
+    if(!q){box.classList.remove('on');box.innerHTML='';return;}
+    var hits=index.filter(function(it){
+      return it.t.indexOf(q)>-1 || it.k.indexOf(q)>-1;
+    }).slice(0,8);
+    if(!hits.length){
+      box.innerHTML='<div class="empty">没有匹配“'+esc(q)+'”的条目，试试“逆光”“线稿”“回电”。</div>';
+    }else{
+      box.innerHTML=hits.map(function(it){
+        return '<a href="'+it.h+'">'+esc(it.t)+'<span style="color:#8b92a6;font-size:12px"> · '+esc(it.k.split(' ')[0])+'</span></a>';
+      }).join('');
+    }
+    box.classList.add('on');
+  }
+  var timer=null;
+  input.addEventListener('input',function(){
+    clearTimeout(timer);
+    var v=input.value;
+    timer=setTimeout(function(){render(v);},120);
+  });
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      e.preventDefault();
+      var first=box.querySelector('a');
+      if(first){location.href=first.getAttribute('href');}
+    }
+    if(e.key==='Escape'){box.classList.remove('on');}
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.search-box')) box.classList.remove('on');
+  });
+})();
+</script>
+</body>
+            </html>
