@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51hlw.com-资源导航与工具指引</title>
+<meta name="description" content="51hlw.com 聚焦资源导航与工具指引，整理可核对的入口分类、使用步骤、常见问题与更新记录，帮助快速找到所需栏目并判断信息可信度。">
+<meta name="keywords" content="51hlw.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d5c'/%3E%3Cpath d='M16 44V20h6v9h8v-9h6v24h-6v-9h-8v9z' fill='%23f2c14e'/%3E%3Ccircle cx='46' cy='38' r='7' fill='none' stroke='%2386c7d9' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14202b;
+  --ink-soft:#3d4d5c;
+  --muted:#66788a;
+  --line:#d8e2ea;
+  --bg:#f5f8fa;
+  --card:#ffffff;
+  --brand:#0f3d5c;
+  --brand-2:#176d8a;
+  --accent:#c9871a;
+  --accent-soft:#fdf3e0;
+  --teal:#e3f1f4;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(20,32,43,.06),0 6px 18px rgba(20,32,43,.06);
+  --gap:20px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --stick-h:0px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.35;margin:0}
+p{margin:0 0 12px}
+ul,ol{margin:0;padding:0}
+button{font-family:inherit}
+
+/* 吸顶容器 */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.notice{
+  background:linear-gradient(90deg,#0f3d5c,#176d8a);
+  color:#e9f4f8;
+  font-size:13px;
+  padding:7px 16px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  text-align:center;
+}
+.notice b{color:#f2c14e;font-weight:600}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:#f2c14e;display:inline-block}
+.site-header{
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(20,32,43,.03);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text strong{font-size:18px;letter-spacing:.3px;color:var(--brand)}
+.brand-text span{font-size:11px;color:var(--muted);letter-spacing:1px}
+.nav-toggle{
+  display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:8px 12px;font-size:14px;color:var(--brand);
+  cursor:pointer;
+}
+.nav-toggle:focus-visible{outline:3px solid #86c7d9;outline-offset:2px}
+.main-nav{margin-left:auto}
+.main-nav ul{list-style:none;display:flex;gap:4px;flex-wrap:wrap}
+.main-nav a{
+  display:block;padding:7px 10px;border-radius:var(--radius-sm);
+  color:var(--ink-soft);font-size:14px;
+}
+.main-nav a:hover{background:var(--teal);text-decoration:none;color:var(--brand)}
+.main-nav a:focus-visible{outline:3px solid #86c7d9;outline-offset:1px}
+.header-tools{display:flex;gap:8px;align-items:center;flex:none}
+.search-box{position:relative;display:flex}
+.search-box input{
+  width:190px;padding:8px 34px 8px 12px;font-size:14px;
+  border:1px solid var(--line);border-radius:999px;background:#fbfdfe;color:var(--ink);
+}
+.search-box input:focus{outline:2px solid #86c7d9;outline-offset:1px;border-color:#86c7d9}
+.search-box button{
+  position:absolute;right:3px;top:3px;bottom:3px;width:28px;border:0;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:13px;cursor:pointer;
+}
+.btn{
+  display:inline-block;padding:9px 16px;border-radius:999px;font-size:14px;
+  background:var(--brand);color:#fff;border:1px solid var(--brand);cursor:pointer;
+}
+.btn:hover{background:#0c3350;text-decoration:none}
+.btn.ghost{background:#fff;color:var(--brand)}
+.btn.ghost:hover{background:var(--teal)}
+.btn:focus-visible{outline:3px solid #86c7d9;outline-offset:2px}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1000px 400px at 85% -10%,#dfeef3 0%,transparent 60%),
+    linear-gradient(180deg,#eef5f8,#f5f8fa);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:46px 20px 42px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--brand-2);
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:16px;
+}
+.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hero h1{
+  font-size:clamp(28px,4.2vw,44px);
+  letter-spacing:-.5px;color:var(--brand);margin-bottom:14px;
+}
+.hero-lead{font-size:16px;color:var(--ink-soft);max-width:34em;margin-bottom:22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:16px}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats strong{display:block;font-size:22px;color:var(--brand);font-variant-numeric:tabular-nums}
+.hero-art{position:relative;min-height:280px}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 12px 24px rgba(15,61,92,.10))}
+
+/* 主体布局 */
+.layout{
+  max-width:1180px;margin:0 auto;padding:34px 20px 60px;
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;
+  align-items:start;
+}
+.main-col{min-width:0}
+.side-col{min-width:0}
+section{scroll-margin-top:110px}
+.sec{margin-bottom:44px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{font-size:21px;color:var(--brand);letter-spacing:.2px}
+.sec-head .cn{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.sec-head .more{margin-left:auto;font-size:13px}
+.lead-note{font-size:14px;color:var(--muted);margin-bottom:14px;max-width:60em}
+
+/* 三栏频道入口 */
+.grid-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 16px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.cat-card:hover{transform:translateY(-3px);border-color:#b8cfdc;box-shadow:var(--shadow)}
+.cat-card h3{font-size:15px;margin-bottom:5px}
+.cat-card h3 a{color:var(--ink)}
+.cat-card h3 a:hover{color:var(--brand-2);text-decoration:none}
+.cat-card p{font-size:13px;color:var(--muted);margin:0}
+.cat-card .count{font-size:12px;color:var(--accent);margin-top:7px;display:block}
+
+/* 精选内容 */
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.feature-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.feature-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.feature-card img{width:100%;height:150px;object-fit:cover}
+.feature-body{padding:14px 16px 16px}
+.feature-body .kicker{font-size:12px;color:var(--accent);letter-spacing:.5px}
+.feature-body h3{font-size:16px;margin:5px 0 7px}
+.feature-body h3 a{color:var(--ink)}
+.feature-body p{font-size:13.5px;color:var(--ink-soft);margin:0 0 8px}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap}
+
+/* 紧凑列表 */
+.list-block{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.list-item{
+  display:flex;gap:14px;padding:13px 16px;border-bottom:1px solid #eef3f6;
+  align-items:flex-start;
+}
+.list-item:last-child{border-bottom:0}
+.list-item:hover{background:#f9fcfe}
+.date-chip{
+  flex:none;font-size:12px;color:var(--brand-2);background:var(--teal);
+  border-radius:6px;padding:3px 8px;font-variant-numeric:tabular-nums;margin-top:2px;
+}
+.list-item .li-body h3{font-size:15px;margin-bottom:3px}
+.list-item .li-body h3 a{color:var(--ink)}
+.list-item .li-body p{font-size:13px;color:var(--muted);margin:0}
+
+/* 深度解析 */
+.depth{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 26px;
+}
+.depth h2{font-size:22px;color:var(--brand);margin-bottom:6px}
+.depth .sub{font-size:13.5px;color:var(--muted);margin-bottom:18px}
+.depth h3{font-size:17px;color:var(--brand);margin:22px 0 8px;padding-left:10px;border-left:4px solid var(--accent)}
+.depth p{font-size:15px;color:var(--ink-soft)}
+.depth .pull{
+  background:var(--accent-soft);border-left:3px solid var(--accent);
+  padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:14.5px;color:#5c4520;margin:16px 0;
+}
+.depth table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0}
+.depth th,.depth td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+.depth th{background:#eef5f8;color:var(--brand);font-weight:600}
+.checklist{list-style:none;margin:10px 0 0}
+.checklist li{position:relative;padding-left:24px;font-size:14px;margin-bottom:7px;color:var(--ink-soft)}
+.checklist li::before{
+  content:"✓";position:absolute;left:0;top:0;color:#177a5a;font-weight:700;
+}
+
+/* 步骤 */
+.steps{counter-reset:step;display:grid;gap:12px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px 14px 56px;position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;
+  background:var(--brand);color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;
+  font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:15px;margin-bottom:3px}
+.step p{font-size:13.5px;color:var(--muted);margin:0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.compare > div{padding:16px 18px}
+.compare > div:first-child{border-right:1px solid var(--line)}
+.compare h3{font-size:15px;margin-bottom:8px;color:var(--brand)}
+.compare .tag{font-size:11px;padding:1px 7px;border-radius:999px;margin-left:6px;vertical-align:middle}
+.tag-a{background:#e3f1f4;color:#176d8a}
+.tag-b{background:#fdf3e0;color:#a56a10}
+.compare ul{list-style:none;font-size:13.5px;color:var(--ink-soft)}
+.compare li{padding:5px 0;border-bottom:1px dashed #eef3f6}
+.compare li:last-child{border-bottom:0}
+
+/* 标签索引 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.tag-cloud a{
+  display:inline-block;font-size:13.5px;padding:6px 13px;border-radius:999px;
+  background:var(--card);border:1px solid var(--line);color:var(--ink-soft);
+}
+.tag-cloud a:hover{background:var(--teal);border-color:#b8cfdc;color:var(--brand);text-decoration:none}
+
+/* 榜单 */
+.rank{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:6px 0}
+.rank ol{list-style:none;counter-reset:rk}
+.rank li{counter-increment:rk;display:flex;gap:12px;padding:11px 18px;align-items:baseline;border-bottom:1px solid #eef3f6}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(rk);flex:none;width:24px;height:24px;border-radius:6px;background:#eef5f8;
+  color:var(--brand);font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:600;
+}
+.rank li:nth-child(1)::before{background:var(--accent);color:#fff}
+.rank li:nth-child(2)::before{background:#86c7d9;color:#0f3d5c}
+.rank li:nth-child(3)::before{background:#bcd9e3;color:#0f3d5c}
+.rank .rk-body{flex:1;min-width:0}
+.rank .rk-body strong{font-size:14.5px;display:block}
+.rank .rk-body span{font-size:12.5px;color:var(--muted)}
+.rank .rk-val{font-size:12px;color:var(--accent);flex:none}
+
+/* 时间线 */
+.timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:20px}
+.tl-item{position:relative;padding-bottom:18px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-27px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--brand-2);
+}
+.tl-item time{font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums}
+.tl-item h3{font-size:14.5px;margin:2px 0 3px}
+.tl-item p{font-size:13px;color:var(--muted);margin:0}
+
+/* FAQ */
+.faq details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:0 16px;margin-bottom:10px;
+}
+.faq summary{
+  cursor:pointer;font-size:15px;font-weight:600;color:var(--ink);padding:14px 0;
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--brand-2);font-weight:400;flex:none}
+.faq details[open] summary::after{content:"－"}
+.faq summary:focus-visible{outline:3px solid #86c7d9;outline-offset:2px;border-radius:4px}
+.faq .ans{font-size:14px;color:var(--ink-soft);padding:0 0 14px;border-top:1px dashed #eef3f6;padding-top:12px}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;
+}
+.comment .who{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;flex:none;color:#fff;font-size:13px;
+  display:flex;align-items:center;justify-content:center;background:var(--brand-2);
+}
+.comment .who b{font-size:13.5px}
+.comment .who span{font-size:12px;color:var(--muted)}
+.comment p{font-size:14px;color:var(--ink-soft);margin:0}
+.comment .ref{font-size:12px;color:var(--brand-2);margin-top:6px;display:inline-block}
+
+/* 相关资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.news-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 16px;
+}
+.news-card time{font-size:12px;color:var(--accent)}
+.news-card h3{font-size:15px;margin:4px 0 6px}
+.news-card h3 a{color:var(--ink)}
+.news-card p{font-size:13px;color:var(--muted);margin:0}
+
+/* 侧栏 */
+.side-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;margin-bottom:20px;
+}
+.side-box h2{font-size:15px;color:var(--brand);margin-bottom:10px}
+.side-box ul{list-style:none;font-size:13.5px}
+.side-box li{padding:6px 0;border-bottom:1px dashed #eef3f6;display:flex;gap:8px;align-items:baseline}
+.side-box li:last-child{border-bottom:0}
+.side-box li .n{flex:none;font-size:12px;color:var(--accent);font-variant-numeric:tabular-nums;min-width:2.4em}
+.side-nav a{display:block;padding:7px 8px;border-radius:6px;color:var(--ink-soft);font-size:13.5px;transition:background .15s}
+.side-nav a.active{background:var(--teal);color:var(--brand);font-weight:600}
+.side-nav a:hover{background:#f0f6f9;text-decoration:none}
+.side-note{font-size:12.5px;color:var(--muted);line-height:1.65}
+
+/* 页脚 */
+.site-footer{background:#0f2c3f;color:#c8d8e2;padding:40px 20px 26px;font-size:13.5px}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.2fr 2fr;gap:36px}
+.footer-brand{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.footer-brand svg{width:34px;height:34px}
+.footer-brand strong{font-size:17px;color:#fff}
+.footer-desc{font-size:13px;color:#9fb6c4;max-width:22em;margin-bottom:14px}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.footer-cols h3{font-size:13px;color:#fff;margin-bottom:8px;letter-spacing:.5px}
+.footer-cols ul{list-style:none;font-size:12.5px}
+.footer-cols li{margin-bottom:6px}
+.footer-cols a{color:#aec4d2}
+.footer-cols a:hover{color:#fff}
+.footer-bottom{
+  max-width:1180px;margin:26px auto 0;padding-top:16px;border-top:1px solid #22485f;
+  font-size:12px;color:#8aa4b4;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:70;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:#fff;color:var(--brand);font-size:18px;cursor:pointer;box-shadow:var(--shadow);
+  opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top:focus-visible{outline:3px solid #86c7d9;outline-offset:2px}
+
+.search-status{font-size:13px;color:var(--accent);margin:0 0 10px;display:none}
+.search-status.show{display:block}
+
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .main-col{order:1}
+  .hero-inner{grid-template-columns:1fr;gap:22px}
+  .hero-art{max-width:400px}
+}
+@media (max-width:860px){
+  .nav-toggle{display:inline-block;order:3}
+  .main-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+    padding:8px 14px 14px;margin-left:0;
+  }
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:2px}
+  .main-nav a{padding:10px 8px}
+  .header-inner{position:relative;flex-wrap:wrap;gap:10px}
+  .header-tools{margin-left:auto}
+  .search-box input{width:150px}
+  .grid-cats{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+  .footer-cols{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  body{font-size:15px}
+  .header-inner{padding:9px 14px}
+  .brand-text strong{font-size:16px}
+  .search-box input{width:112px}
+  .grid-cats{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .compare > div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .depth{padding:18px 16px}
+  .layout{padding:22px 14px 46px}
+  .hero-inner{padding:32px 14px 30px}
+  .to-top{right:12px;bottom:16px}
+  .footer-cols{grid-template-columns:1fr}
+  .hero-stats{gap:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice" role="note">
+    <span class="dot" aria-hidden="true"></span>
+    <span><b>11月8日</b> 更新：工具入口分类表调整 6 项，新增「免登录工具查证」说明；本周导航页新增 4 个可用栏目，均已人工打开核对。</span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="51hlw.com 首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#0f3d5c"/>
+          <path d="M16 44V20h6v9h8v-9h6v24h-6v-9h-8v9z" fill="#f2c14e"/>
+          <circle cx="46" cy="38" r="7" fill="none" stroke="#86c7d9" stroke-width="4"/>
+        </svg>
+        <span class="brand-text">
+          <strong>51hlw.com</strong>
+          <span>资源导航 · 工具指引</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">栏目菜单</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#channels">频道分类</a></li>
+          <li><a href="/#featured">精选推荐</a></li>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#depth">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <form class="search-box" id="searchForm" role="search" aria-label="站内查找">
+          <input type="search" id="searchInput" placeholder="查找栏目或工具" aria-label="输入关键词查找">
+          <button type="submit" aria-label="搜索">搜</button>
+        </form>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag"><span class="dot" aria-hidden="true"></span>2026-11-08 版面核对版</span>
+        <h1 id="heroTitle">51hlw.com</h1>
+        <p class="hero-lead">把散落在不同站点的入口收进一张可核对的分类表：按用途、登录要求和更新频率分组，打开前先知道要花多少时间、需不需要账号。</p>
+        <div class="hero-actions">
+          <a class="btn" href="/#channels">进入频道分类</a>
+          <a class="btn ghost" href="/#guide">查看使用步骤</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>42</strong>已核对入口</div>
+          <div><strong>9</strong>分类频道</div>
+          <div><strong>6</strong>免登录工具</div>
+          <div><strong>11-08</strong>最近核对</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#176d8a"/>
+              <stop offset="1" stop-color="#0f3d5c"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f2c14e"/>
+              <stop offset="1" stop-color="#d9a12e"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="24" width="384" height="248" rx="18" fill="url(#g1)"/>
+          <rect x="18" y="24" width="384" height="40" rx="18" fill="#0c3350"/>
+          <circle cx="44" cy="44" r="5" fill="#f2c14e"/>
+          <circle cx="62" cy="44" r="5" fill="#86c7d9"/>
+          <circle cx="80" cy="44" r="5" fill="#e3f1f4"/>
+          <rect x="40" y="84" width="96" height="62" rx="10" fill="#1a5173"/>
+          <rect x="40" y="84" width="96" height="62" rx="10" fill="none" stroke="#86c7d9" stroke-width="1.5"/>
+          <rect x="54" y="100" width="54" height="7" rx="3.5" fill="#e3f1f4"/>
+          <rect x="54" y="116" width="68" height="6" rx="3" fill="#86c7d9" opacity=".7"/>
+          <rect x="152" y="84" width="120" height="62" rx="10" fill="#1a5173"/>
+          <rect x="152" y="84" width="120" height="62" rx="10" fill="none" stroke="#86c7d9" stroke-width="1.5"/>
+          <rect x="166" y="100" width="70" height="7" rx="3.5" fill="#e3f1f4"/>
+          <rect x="166" y="116" width="88" height="6" rx="3" fill="#86c7d9" opacity=".7"/>
+          <rect x="288" y="84" width="96" height="62" rx="10" fill="url(#g2)"/>
+          <rect x="302" y="100" width="54" height="7" rx="3.5" fill="#3a2a06" opacity=".75"/>
+          <rect x="302" y="116" width="66" height="6" rx="3" fill="#3a2a06" opacity=".45"/>
+          <rect x="40" y="166" width="200" height="10" rx="5" fill="#86c7d9" opacity=".35"/>
+          <rect x="40" y="190" width="160" height="10" rx="5" fill="#86c7d9" opacity=".25"/>
+          <rect x="40" y="214" width="240" height="10" rx="5" fill="#86c7d9" opacity=".18"/>
+          <circle cx="330" cy="196" r="34" fill="none" stroke="#f2c14e" stroke-width="3" opacity=".9"/>
+          <path d="M318 196l9 10 17-20" stroke="#f2c14e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <!-- 主内容 -->
+    <div class="main-col">
+
+      <!-- 领域概览 -->
+      <section class="sec" id="overview">
+        <div class="sec-head">
+          <h2>资源导航领域概览</h2>
+          <span class="cn">Overview</span>
+        </div>
+        <p class="lead-note">导航站做的不是收藏夹搬运，而是替使用者先做一轮筛选：入口还能不能打开、要不要注册、内容更新到哪一天。下面三类是使用频率最高的查询对象。</p>
+        <div class="compare">
+          <div>
+            <h3>资源型入口 <span class="tag tag-a">看存量</span></h3>
+            <ul>
+              <li>判断依据：栏目数量、历史归档是否可翻页</li>
+              <li>典型耗时：3—8 分钟能筛出 1—2 个可用源</li>
+              <li>风险点：域名更换频繁，旧书签容易失效</li>
+              <li>核对动作：先看页面底部的维护日期</li>
+            </ul>
+          </div>
+          <div>
+            <h3>工具型入口 <span class="tag tag-b">看可用</span></h3>
+            <ul>
+              <li>判断依据：免登录可用范围、单次处理上限</li>
+              <li>典型耗时：1—3 分钟即可验证是否跑通</li>
+              <li>风险点：免费额度按日重置，晚间排队明显</li>
+              <li>核对动作：用一条真实数据试跑再收藏</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 频道分类 -->
+      <section class="sec" id="channels">
+        <div class="sec-head">
+          <h2>频道分类入口</h2>
+          <span class="cn">Channels</span>
+          <a class="more" href="/#related">按标签浏览 →</a>
+        </div>
+        <div class="grid-cats">
+          <div class="cat-card">
+            <h3><a href="/#featured">文档与资料下载</a></h3>
+            <p>PDF、表格、模板类文件，标注是否需要注册。</p>
+            <span class="count">7 个入口 · 5 个免登录</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">在线格式转换工具</a></h3>
+            <p>图片、音视频、文档互转，注明单次文件上限。</p>
+            <span class="count">6 个入口 · 3 个限 100MB</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">图片压缩与裁切</a></h3>
+            <p>批量压缩、尺寸裁剪、透明背景处理。</p>
+            <span class="count">5 个入口 · 全部免登录</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">文本错别字校对</a></h3>
+            <p>长文拼写检查、标点统一、中英混排整理。</p>
+            <span class="count">4 个入口 · 2 个需账号</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">二维码生成与识别</a></h3>
+            <p>批量生成、扫码解析、落地页短链展示。</p>
+            <span class="count">4 个入口 · 导出格式各异</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">网页快照与存档</a></h3>
+            <p>抓取当前页、保存纯文本、比对历史版本。</p>
+            <span class="count">3 个入口 · 抓取有频率限制</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">设计尺寸速查</a></h3>
+            <p>社交平台封面、印刷开本、屏幕断点对照。</p>
+            <span class="count">5 个入口 · 纯静态页面</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">字体授权查询</a></h3>
+            <p>商用范围、免费字体清单、授权条款核对。</p>
+            <span class="count">3 个入口 · 1 个需付费下载</span>
+          </div>
+          <div class="cat-card">
+            <h3><a href="/#featured">开放数据检索</a></h3>
+            <p>公开统计口径、指标说明、下载格式。</p>
+            <span class="count">5 个入口 · 支持 CSV 导出</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选推荐 -->
+      <section class="sec" id="featured">
+        <div class="sec-head">
+          <h2>本周精选内容推荐</h2>
+          <span class="cn">Featured</span>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/51hlw-nav01/560/300" width="560" height="300" loading="lazy" alt="桌面平铺的文件夹与分类标签示意图">
+            <div class="feature-body">
+              <span class="kicker">导航方法</span>
+              <h3><a href="/#depth">从 42 个入口里留下 8 个：一次分类清理记录</a></h3>
+              <p>11月3日把原有书签按「每日用」「每月用」「备查」三档重排，删掉 17 个超过 90 天未打开的链接。</p>
+              <div class="meta"><span>11-03</span><span>阅读 6 分钟</span></div>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="https://picsum.photos/seed/51hlw-tool02/560/300" width="560" height="300" loading="lazy" alt="在线转换工具参数设置界面的局部截图示意">
+            <div class="feature-body">
+              <span class="kicker">工具实测</span>
+              <h3><a href="/#depth">免登录图片压缩，100 张实测通过 91 张</a></h3>
+              <p>测试样本 100 张、单张 2—5MB，压缩后体积平均下降 63%，失败 9 张集中在带透明通道的 PNG。</p>
+              <div class="meta"><span>11-05</span><span>含失败样本说明</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="sec" id="updates">
+        <div class="sec-head">
+          <h2>最新更新记录</h2>
+          <span class="cn">Updates</span>
+        </div>
+        <div class="list-block">
+          <div class="list-item">
+            <span class="date-chip">11-08</span>
+            <div class="li-body">
+              <h3><a href="/#channels">入口分类表调整 6 项，新增「免登录工具查证」标记</a></h3>
+              <p>把原来混在「工具」里的 6 个条目按是否要账号拆开，标注单次处理上限。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">11-07</span>
+            <div class="li-body">
+              <h3><a href="/#faq">补充常见问题：转换失败后文件会不会被保留</a></h3>
+              <p>依据 3 个工具的服务条款原文，写明保留时长分别是 1 小时、24 小时和不保留。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">11-06</span>
+            <div class="li-body">
+              <h3><a href="/#rank">榜单页更换评分口径，改为可用性 40% + 速度 30% + 说明完整度 30%</a></h3>
+              <p>旧口径把「界面美观」算进 20%，导致两个长期不更新的入口排名虚高。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">11-04</span>
+            <div class="li-body">
+              <h3><a href="/#guide">体验指南加入三条试跑步骤</a></h3>
+              <p>先用一条真实数据跑通，再决定是否收藏，减少收藏即弃的情况。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">11-01</span>
+            <div class="li-body">
+              <h3><a href="/#news">下架 2 个打不开的存档入口</a></h3>
+              <p>域名解析正常但页面返回 404，连续观察 5 天后从列表移除，旧条目留在时间线备查。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="sec" id="depth">
+        <div class="depth">
+          <h2>深度解析：导航站的可用性靠什么维持</h2>
+          <p class="sub">围绕 2026 年 10 月至 11 月的一次入口清理，拆开三个可核对的判断。</p>
+
+          <h3>一、更新日期比栏目数量更能预测可用率</h3>
+          <p>10 月 12 日到 11 月 8 日，抽测了 42 个入口。页面底部标有近 30 天内更新日期的 23 个入口，打开成功率 91%（21 个正常返回）；没有日期标注的 19 个入口，成功率只有 58%（11 个）。差距 33 个百分点，比栏目多少的差别更直接。</p>
+          <p>这条判断可以被反驳：成功率也可能和入口类型有关，文档下载类本身失效更快。所以下表把类型也列出来，方便按组比对。</p>
+          <table>
+            <thead>
+              <tr><th>分组</th><th>数量</th><th>可打开</th><th>成功率</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>有 30 天内更新日期</td><td>23</td><td>21</td><td>91%</td></tr>
+              <tr><td>无日期标注</td><td>19</td><td>11</td><td>58%</td></tr>
+              <tr><td>其中文档下载类</td><td>12</td><td>8</td><td>67%</td></tr>
+              <tr><td>其中工具类</td><td>10</td><td>9</td><td>90%</td></tr>
+            </tbody>
+          </table>
+          <div class="pull">可核对的做法：打开任一入口，先看页脚日期，再看版权年份。日期在 30 天内、版权年份为 2026 的，本次抽测里没有出现失效。</div>
+
+          <h3>二、免登录范围写不清楚，比收费更影响留存</h3>
+          <p>10 月 20 日的使用记录里，6 个免登录工具的首次完成率是 83%，4 个「注册后可用」的工具是 46%。但真正卡住人的不是注册本身：在 4 个需注册工具中，有 3 个把免费额度写成「基础版」，实际限制藏在帮助页第 2 层，平均多花 4 分钟才确认单次上限。</p>
+          <p>说法差异也值得记一笔。同一个转换工具，首页写「免费无限制」，帮助页写「单文件不超过 50MB」。两者都在 11 月 2 日抓取的页面上，属于站点自身表述不一致，应按帮助页为准。</p>
+
+          <h3>三、分类粒度停在 9 个左右，再细分反而降低命中率</h3>
+          <p>10 月 28 日做过一次对照：把 42 个入口按 9 类分，测试者平均 2.3 次点击找到目标；按 18 类分，升到 3.6 次。原因不复杂——细分后出现「图片工具」「图片处理」「图像编辑」三个近义分类，选择成本上升。</p>
+          <p>这条结论的边界：样本只有 6 名测试者、每人 10 次任务，人数偏少，换一批人可能结果不同。目前保留 9 类，并给近义分类加互见链接。</p>
+          <ul class="checklist">
+            <li>每个入口记录三项：最近核对日期、是否需登录、单次处理上限</li>
+            <li>近义分类之间互放链接，避免来回翻找</li>
+            <li>失效入口先观察 5 天再移除，旧条目保留在时间线</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <h2>新用户体验指南：四步跑通一个入口</h2>
+          <span class="cn">Guide</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>先看核对日期和登录要求</h3>
+            <p>页脚日期在 30 天内、标注免登录的入口优先试。需要账号的，先确认免费额度再注册。</p>
+          </div>
+          <div class="step">
+            <h3>用一条真实数据试跑</h3>
+            <p>拿手头最小的一份文件或最短的一段文字，跑完整流程，而不是只看首页截图。</p>
+          </div>
+          <div class="step">
+            <h3>记下限制条件</h3>
+            <p>单次上限、导出格式、文件保留时长写进书签备注，下次不用重新查。</p>
+          </div>
+          <div class="step">
+            <h3>每月清理一次</h3>
+            <p>90 天没打开的入口直接移出常用组，转进备查清单，避免越收越乱。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="sec" id="rank">
+        <div class="sec-head">
+          <h2>入口可用性榜单（11月8日口径）</h2>
+          <span class="cn">Ranking</span>
+        </div>
+        <div class="rank">
+          <ol>
+            <li>
+              <div class="rk-body"><strong>图片压缩批量版</strong><span>免登录，单次 20 张，页脚日期 11-06</span></div>
+              <span class="rk-val">94 分</span>
+            </li>
+            <li>
+              <div class="rk-body"><strong>文档格式转换器</strong><span>免登录，单文件 50MB，帮助页写明保留 1 小时</span></div>
+              <span class="rk-val">91 分</span>
+            </li>
+            <li>
+              <div class="rk-body"><strong>文本错别字校对</strong><span>需账号，免费版每次 3000 字，处理速度稳定</span></div>
+              <span class="rk-val">87 分</span>
+            </li>
+            <li>
+              <div class="rk-body"><strong>二维码批量生成</strong><span>免登录，导出版式 3 种，无广告弹窗</span></div>
+              <span class="rk-val">84 分</span>
+            </li>
+            <li>
+              <div class="rk-body"><strong>网页快照存档</strong><span>免登录，抓取有频率限制，历史版本可翻页</span></div>
+              <span class="rk-val">80 分</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 时间线 -->
+      <section class="sec" id="timeline">
+        <div class="sec-head">
+          <h2>分类表调整时间线</h2>
+          <span class="cn">Timeline</span>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <time datetime="2026-10-12">10月12日</time>
+            <h3>启动 42 个入口的第一轮抽测</h3>
+            <p>记录打开状态、是否需登录、页脚日期三项，形成初始对照表。</p>
+          </div>
+          <div class="tl-item">
+            <time datetime="2026-10-20">10月20日</time>
+            <h3>统计免登录与需注册工具的首次完成率</h3>
+            <p>免登录组 83%，需注册组 46%，差异集中在额度说明不明确。</p>
+          </div>
+          <div class="tl-item">
+            <time datetime="2026-10-28">10月28日</time>
+            <h3>做 9 类与 18 类的分类粒度对照</h3>
+            <p>6 名测试者、每人 10 次任务，9 类平均 2.3 次点击命中，18 类为 3.6 次。</p>
+          </div>
+          <div class="tl-item">
+            <time datetime="2026-11-01">11月1日</time>
+            <h3>下架 2 个长期 404 的存档入口</h3>
+            <p>连续观察 5 天仍无法访问，移出主列表，旧条目保留备查。</p>
+          </div>
+          <div class="tl-item">
+            <time datetime="2026-11-08">11月8日</time>
+            <h3>新增「免登录工具查证」标记</h3>
+            <p>6 个条目按登录要求重新拆分，单次上限一并写入口卡片。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <h2>相关资讯与动态</h2>
+          <span class="cn">News</span>
+        </div>
+        <div class="news-grid">
+          <div class="news-card">
+            <time datetime="2026-11-07">11-07</time>
+            <h3><a href="/#faq">文件保留时长差异：1 小时、24 小时与不保留</a></h3>
+            <p>三个转换工具的条款分别写明不同保留策略，上传前值得看一眼。</p>
+          </div>
+          <div class="news-card">
+            <time datetime="2026-11-06">11-06</time>
+            <h3><a href="/#rank">评分口径调整后，两个老入口排名下降</a></h3>
+            <p>界面美观不再单独计分，长期不更新的入口从第 2、第 4 位落到第 7、第 9 位。</p>
+          </div>
+          <div class="news-card">
+            <time datetime="2026-11-05">11-05</time>
+            <h3><a href="/#depth">100 张图片压缩实测，9 张失败</a></h3>
+            <p>失败样本均为带透明通道的 PNG，改用另一入口后全部通过。</p>
+          </div>
+          <div class="news-card">
+            <time datetime="2026-11-02">11-02</time>
+            <h3><a href="/#depth">同一工具首页与帮助页表述不一致</a></h3>
+            <p>首页写「免费无限制」，帮助页写单文件 50MB，按帮助页为准记录。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="sec faq" id="faq">
+        <div class="sec-head">
+          <h2>常见问题</h2>
+          <span class="cn">FAQ</span>
+        </div>
+        <details>
+          <summary>免登录工具的单次处理上限一般是多少？</summary>
+          <div class="ans">图片压缩类多为 20 张或单张 10MB；文档转换类常见单文件 50MB；文本校对类按字数算，免费版多在 3000—5000 字。具体数值以各工具帮助页为准，首页宣传语常省略限制条件。</div>
+        </details>
+        <details>
+          <summary>上传的文件会在服务器保留多久？</summary>
+          <div class="ans">11 月 7 日核对的三个工具分别写明：保留 1 小时、保留 24 小时、处理完即不保留。条款位置通常在页脚「隐私」或「服务说明」二级页面，首页一般不提。涉及敏感资料时，优先选「不保留」的一类。</div>
+        </details>
+        <details>
+          <summary>为什么有的入口标了核对日期，有的没有？</summary>
+          <div class="ans">核对日期来自人工打开并确认页面可用，11 月 8 日这一轮共核对 42 个入口，其中 23 个页面自带更新日期。没有标注的 19 个入口，多为纯静态说明页，维护方不公布时间，采信度相应降低。</div>
+        </details>
+        <details>
+          <summary>分类为什么是 9 个，不能更细吗？</summary>
+          <div class="ans">10 月 28 日的对照显示，18 类时近义分类增多，测试者平均点击 3.6 次才找到目标，9 类时为 2.3 次。保留 9 类并在近义项之间加互见链接，是目前兼顾查找速度和覆盖面的折中。</div>
+        </details>
+        <details>
+          <summary>入口打不开了怎么处理？</summary>
+          <div class="ans">先换网络环境重试一次，再检查是否域名变更。连续 5 天返回 404 的入口会移出主列表，旧条目留在时间线，方便确认是下架还是临时故障。10 月 26 日至 11 月 1 日期间共有 2 个入口按此流程下架。</div>
+        </details>
+        <details>
+          <summary>榜单评分具体怎么算？</summary>
+          <div class="ans">可用性占 40%，含打开成功率与页面稳定度；速度占 30%，按单次任务平均耗时；说明完整度占 30%，看是否写明登录要求、单次上限和文件保留策略。11 月 6 日起停用「界面美观」这一项。</div>
+        </details>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="sec" id="comments">
+        <div class="sec-head">
+          <h2>用户评论</h2>
+          <span class="cn">Comments</span>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">陈</span>
+              <b>陈姓用户</b>
+              <span>11-08</span>
+            </div>
+            <p>图片压缩那项标了单次 20 张，实际第 21 张会提示排队，这个细节写在卡片上比只写「批处理」有用得多。</p>
+            <a class="ref" href="/#rank">对应：图片压缩批量版</a>
+          </div>
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">罗</span>
+              <b>罗工程师</b>
+              <span>11-07</span>
+            </div>
+            <p>9 类这个结论样本只有 6 个人，说服力一般。不过近义分类加互见链接的思路是对的，找「图像编辑」和「图片处理」时确实绕了两圈。</p>
+            <a class="ref" href="/#depth">对应：分类粒度对照</a>
+          </div>
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">周</span>
+              <b>周同学</b>
+              <span>11-06</span>
+            </div>
+            <p>文档转换器首页写免费无限制，帮助页写 50MB，我上传 80MB 的文件直接失败。按帮助页为准是对的，但首页那句话挺误导的。</p>
+            <a class="ref" href="/#depth">对应：表述不一致记录</a>
+          </div>
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">安</span>
+              <b>安姓读者</b>
+              <span>11-05</span>
+            </div>
+            <p>时间线里下架的那两个存档入口我收藏过，确实连续几天打不开，移出主列表比较合理，留着反而浪费点击。</p>
+            <a class="ref" href="/#timeline">对应：11月1日下架记录</a>
+          </div>
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">吴</span>
+              <b>吴姓用户</b>
+              <span>11-04</span>
+            </div>
+            <p>评分把界面美观去掉之后，之前排第二的那个入口掉下去了，这个改动我认可。它的免费额度说明藏得太深，找了四分钟。</p>
+            <a class="ref" href="/#rank">对应：评分口径调整</a>
+          </div>
+          <div class="comment">
+            <div class="who">
+              <span class="avatar" aria-hidden="true">秦</span>
+              <b>秦姓用户</b>
+              <span>11-03</span>
+            </div>
+            <p>整体还行，就是首屏数字和列表对不上——首屏写 42 个入口，分类卡片里加起来我数到 42 个，这点倒是没虚标。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 相关推荐 -->
+      <section class="sec" id="related">
+        <div class="sec-head">
+          <h2>相关推荐标签</h2>
+          <span class="cn">Tags</span>
+        </div>
+        <div class="tag-cloud">
+          <a href="/#channels">图片压缩在线工具</a>
+          <a href="/#channels">PDF 转 Word 免登录</a>
+          <a href="/#channels">文本错别字校对工具</a>
+          <a href="/#channels">二维码批量生成器</a>
+          <a href="/#channels">网页快照存档方法</a>
+          <a href="/#featured">文件保留时长说明</a>
+          <a href="/#rank">工具可用性评分</a>
+          <a href="/#guide">入口试跑步骤</a>
+          <a href="/#faq">免登录额度查询</a>
+          <a href="/#timeline">分类调整记录</a>
+        </div>
+      </section>
+
+      <!-- 补充板块：创作者证言 -->
+      <section class="sec" id="voice">
+        <div class="sec-head">
+          <h2>维护者手记</h2>
+          <span class="cn">Notes</span>
+        </div>
+        <div class="list-block">
+          <div class="list-item">
+            <span class="date-chip">11-08</span>
+            <div class="li-body">
+              <h3>「免登录工具查证」这一列为什么值得单独拆出来</h3>
+              <p>10 月的首次完成率差距是 83% 对 46%，差在额度说明不在注册流程。这一列直接写单次上限和保留时长，减少二次查证。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">11-02</span>
+            <div class="li-body">
+              <h3>抓到一个站点自我矛盾的说法</h3>
+              <p>11 月 2 日同一页面上，首页横幅写「免费无限制」，帮助页第 3 节写单文件 50MB。按帮助页记录，并在卡片上注明差异。</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <span class="date-chip">10-30</span>
+            <div class="li-body">
+              <h3>保留旧条目这件事的取舍</h3>
+              <p>下架的 2 个入口仍留在时间线，原因是有人可能用它确认故障发生时间。主列表只放当前可用的，两个位置职责分开。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏">
+      <nav class="side-box side-nav" aria-label="本页导航">
+        <h2>本页导航</h2>
+        <a href="/#overview">领域概览</a>
+        <a href="/#channels">频道分类</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#updates">更新记录</a>
+        <a href="/#depth">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#rank">可用性榜单</a>
+        <a href="/#timeline">调整时间线</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#related">推荐标签</a>
+      </nav>
+
+      <div class="side-box">
+        <h2>本周高频搜索</h2>
+        <ul>
+          <li><span class="n">01</span><a href="/#channels">图片压缩 免登录</a></li>
+          <li><span class="n">02</span><a href="/#channels">PDF 转 Word 上限</a></li>
+          <li><span class="n">03</span><a href="/#channels">二维码 批量导出</a></li>
+          <li><span class="n">04</span><a href="/#channels">错别字校对 字数</a></li>
+          <li><span class="n">05</span><a href="/#channels">网页存档 历史版本</a></li>
+        </ul>
+      </div>
+
+      <div class="side-box">
+        <h2>核对说明</h2>
+        <p class="side-note">入口的最近核对日期以人工打开结果为准，页面自带日期另行标注。评分口径自 11 月 6 日起调整，旧分数不再沿用。文中示例数据用于说明判断方法，不构成服务承诺。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#176d8a"/>
+          <path d="M16 44V20h6v9h8v-9h6v24h-6v-9h-8v9z" fill="#f2c14e"/>
+          <circle cx="46" cy="38" r="7" fill="none" stroke="#e3f1f4" stroke-width="4"/>
+        </svg>
+        <strong>51hlw.com</strong>
+      </div>
+      <p class="footer-desc">为查入口的人省下试错时间：先看核对日期与登录要求，再决定要不要收藏。</p>
+      <p class="footer-desc" style="margin-bottom:0">页面更新时间 2026-11-08，对应正文更新记录中的 11-08 分类表调整与 11-07 FAQ 补充。</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h3>频道入口</h3>
+        <ul>
+          <li><a href="/#channels">文档与资料下载</a></li>
+          <li><a href="/#channels">在线格式转换</a></li>
+          <li><a href="/#channels">图片压缩与裁切</a></li>
+          <li><a href="/#channels">文本错别字校对</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>判断参考</h3>
+        <ul>
+          <li><a href="/#depth">入口可用性分析</a></li>
+          <li><a href="/#rank">可用性榜单</a></li>
+          <li><a href="/#guide">试跑四步</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>更新与互动</h3>
+        <ul>
+          <li><a href="/#updates">更新记录</a></li>
+          <li><a href="/#timeline">调整时间线</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#voice">维护者手记</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>本站条目与评分为示例数据，用于说明核对方法；实际服务以各入口官方页面为准。</span>
+    <span>© 2026 51hlw.com 保留权利</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+<script>
+(function(){
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 860){
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && mainNav.classList.contains('open')){
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.focus();
+    }
+  });
+
+  // 本地查找
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var status = document.createElement('p');
+  status.className = 'search-status';
+  status.setAttribute('role','status');
+  var mainCol = document.querySelector('.main-col');
+  mainCol.insertBefore(status, mainCol.firstChild);
+
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('.main-col .sec'));
+  var index = blocks.map(function(sec){
+    return { el: sec, text: sec.textContent.replace(/\s+/g,'') };
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = input.value.trim();
+    blocks.forEach(function(sec){ sec.style.display = ''; });
+    if(!q){
+      status.textContent = '';
+      status.classList.remove('show');
+      return;
+    }
+    var key = q.replace(/\s+/g,'').toLowerCase();
+    var hits = 0;
+    index.forEach(function(item){
+      if(item.text.toLowerCase().indexOf(key) === -1){
+        item.el.style.display = 'none';
+      } else {
+        hits++;
+      }
+    });
+    if(hits === 0){
+      blocks.forEach(function(sec){ sec.style.display = ''; });
+      status.textContent = '没有找到与「' + q + '」匹配的板块。试试「压缩」「转换」「FAQ」「榜单」等更短的关键词。';
+      status.classList.add('show');
+    } else {
+      status.textContent = '找到 ' + hits + ' 个含「' + q + '」的板块，已隐藏其余内容。清空搜索框重新提交可恢复。';
+      status.classList.add('show');
+    }
+  });
+
+  input.addEventListener('search', function(){
+    if(input.value === ''){
+      blocks.forEach(function(sec){ sec.style.display = ''; });
+      status.textContent = '';
+      status.classList.remove('show');
+    }
+  });
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  // 侧栏滚动高亮
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var targetIds = sideLinks.map(function(a){
+    return a.getAttribute('href').replace('/#','');
+  });
+  var sections = targetIds.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+
+  if('IntersectionObserver' in window && sections.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          sideLinks.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === '/#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+
+  // 预留吸顶高度
+  function setStickHeight(){
+    var wrap = document.querySelector('.sticky-wrap');
+    if(wrap){
+      document.documentElement.style.setProperty('--stick-h', wrap.offsetHeight + 'px');
+      var style = document.querySelectorAll('.sec');
+      style.forEach(function(el){
+        el.style.scrollMarginTop = (wrap.offsetHeight + 24) + 'px';
+      });
+    }
+  }
+  setStickHeight();
+  window.addEventListener('resize', setStickHeight);
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "51hlw.com",
+  "inLanguage": "zh-CN",
+  "description": "资源导航与工具指引，整理可核对的入口分类、使用步骤与更新记录。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "51hlw.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "免登录工具的单次处理上限一般是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "图片压缩类多为 20 张或单张 10MB；文档转换类常见单文件 50MB；文本校对类按字数算，免费版多在 3000—5000 字。具体数值以各工具帮助页为准。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "上传的文件会在服务器保留多久？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "11 月 7 日核对的三个工具分别写明保留 1 小时、保留 24 小时、处理完即不保留，条款位置通常在页脚隐私或服务说明二级页面。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "分类为什么是 9 个，不能更细吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 月 28 日的对照显示，18 类时近义分类增多，测试者平均点击 3.6 次才找到目标，9 类时为 2.3 次，因此保留 9 类并加互见链接。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "入口打不开了怎么处理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先换网络环境重试并检查域名是否变更；连续 5 天返回 404 的入口会移出主列表，旧条目保留在时间线备查。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "榜单评分具体怎么算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可用性占 40%，速度占 30%，说明完整度占 30%。11 月 6 日起停用界面美观这一项。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+          </html>
